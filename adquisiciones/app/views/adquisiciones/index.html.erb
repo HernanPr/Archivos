@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Adquisiciones</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fecha compra</th>
+      <th>Monto</th>
+      <th>Cliente</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @adquisiciones.each do |adquisicione| %>
+      <tr>
+        <td><%= adquisicione.fecha_compra %></td>
+        <td><%= adquisicione.monto %></td>
+        <td><%= adquisicione.cliente %></td>
+        <td><%= link_to 'Show', adquisicione, class: 'button radius' %></td>
+        <td><%= link_to 'Edit', edit_adquisicione_path(adquisicione), class: 'button radius succes' %></td>
+        <td><%= link_to 'Destroy', adquisicione, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button radius alert' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Adquisicione', new_adquisicione_path %>

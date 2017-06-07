@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fecha compra:</strong>
+  <%= @adquisicione.fecha_compra %>
+</p>
+
+<p>
+  <strong>Monto:</strong>
+  <%= @adquisicione.monto %>
+</p>
+
+<p>
+  <strong>Cliente:</strong>
+  <%= @adquisicione.cliente %>
+</p>
+
+<%= link_to 'Edit', edit_adquisicione_path(@adquisicione) %> |
+<%= link_to 'Back', adquisiciones_path %>
